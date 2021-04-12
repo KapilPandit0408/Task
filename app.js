@@ -8,7 +8,7 @@ const { json } = require('body-parser');
 //Connection string 
 const url = process.env.MONGO_URL  || "mongodb+srv://kapil123:kapil123@cluster0.wjkqg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority" || "mongodb://localhost:27017/VAYUZSIGNUPFORM";
 //Db connection
-mongoose.connect(url,
+mongoose.connect(`mongodb+srv://kapil123:kapil123@cluster0.wjkqg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
