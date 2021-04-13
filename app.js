@@ -4,11 +4,11 @@ const mongoose          = require('mongoose');
 const express           = require('express');
 const app               = express();
 const methodOverride    = require('method-override');
-const { json }          = require('body-parser');
-const jwt               = require("jsonwebtoken");
-const bcrypt            = require("bcrypt");
-const path              = require('path');
-const multer            = require('multer');
+const { json } = require('body-parser');
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
+const path = require('path');
+const multer  = require('multer');
 require("dotenv").config();
 
 const storage = multer.diskStorage({
@@ -69,7 +69,7 @@ mongoose.connect(`mongodb+srv://kapil123:kapil123@cluster0.wjkqg.mongodb.net/myF
         });
     });    
 
-    app.post("/signup", async (req, res) => {
+app.post("/signup", async (req, res) => {
         const name = req.body.name;
         const email = req.body.email;
         const password = req.body.password;
@@ -107,8 +107,9 @@ mongoose.connect(`mongodb+srv://kapil123:kapil123@cluster0.wjkqg.mongodb.net/myF
         });
     });
 
+
     
-    app.put("/date/:id", (req, res) => {
+        app.put("/date/:id", (req, res) => {
         const id = req.params.id;
         console.log(id);
         const date = req.body.date;
@@ -124,7 +125,7 @@ mongoose.connect(`mongodb+srv://kapil123:kapil123@cluster0.wjkqg.mongodb.net/myF
         })
     })
 
-    app.put("/image/:id", upload.single('image'), (req, res) => {
+        app.put("/image/:id", upload.single('image'), (req, res) => {
         const id = req.params.id;
         const url = req.file.path;
         const filename = req.file.filename;
