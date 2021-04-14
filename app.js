@@ -69,7 +69,7 @@ mongoose.connect(`mongodb+srv://kapil123:kapil123@cluster0.wjkqg.mongodb.net/myF
         });
     });    
 
-app.post("/signup", async (req, res) => {
+    app.post("/signup", async (req, res) => {
         const name = req.body.name;
         const email = req.body.email;
         const password = req.body.password;
@@ -107,9 +107,8 @@ app.post("/signup", async (req, res) => {
         });
     });
 
-
     
-        app.put("/date/:id", (req, res) => {
+    app.put("/date/:id", (req, res) => {
         const id = req.params.id;
         console.log(id);
         const date = req.body.date;
@@ -125,7 +124,7 @@ app.post("/signup", async (req, res) => {
         })
     })
 
-        app.put("/image/:id", upload.single('image'), (req, res) => {
+    app.put("/image/:id", upload.single('image'), (req, res) => {
         const id = req.params.id;
         const url = req.file.path;
         const filename = req.file.filename;
@@ -154,7 +153,7 @@ app.post("/signup", async (req, res) => {
     app.get("/login", (req,res) => {
         res.render("login");
     });
-    app.post("/login", async (req, res) => {
+    app.post("/logged", async (req, res) => {
         try {
           const { email, password } = req.body;
       
