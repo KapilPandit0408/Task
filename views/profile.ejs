@@ -2,15 +2,16 @@
 
 
   <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <h1>Name : <%= user.name %></h1>
-        <h1>Email : <%= user.email %></h1>
-        <h1>DOB : <%= user.date.toDateString() %></h1>
-      </div>
-      <div class="col-sm">
-        <img style="padding: 10px; border-radius: 10%;" width="80%" src="/<%= user.image.url %>" alt="">
-      </div>
-
-    </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <div>
+                    <h1>Name : <%= user.name %></h1>
+                    <h1>Email : <%= user.email %></h1>
+                    <h1>DOB : <%= user.date.toDateString() %></h1>
+                </div>
+            </div>
+            <div class="col-lg-4" style="text-align: center;">
+                <img style="padding: 10px; border-radius: 5%;" width="60%" src="/<%= user.image.url %>" alt="">
+            </div>
+        </div>
   </div>
